@@ -1,0 +1,97 @@
+<title>Privacy Policy</title>
+<style>
+  :root{
+    --bg:#F6EEDD; --card:#FFFFFF; --ink:#1F2749; --ink-sub:#4A5578; --ink-muted:#8991AC;
+    --accent:#2C3968; --gold:#E4A72E; --border: rgba(31,39,73,.14);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#161B2E; --card:#1F2540; --ink:#F0EFE9; --ink-sub:#C7CBE0; --ink-muted:#8E93B4;
+      --accent:#8CA3E8; --gold:#E4A72E; --border: rgba(240,239,233,.14);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#161B2E; --card:#1F2540; --ink:#F0EFE9; --ink-sub:#C7CBE0; --ink-muted:#8E93B4;
+    --accent:#8CA3E8; --gold:#E4A72E; --border: rgba(240,239,233,.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding-inline:24px; padding-block:48px 72px;
+  }
+  .wrap{max-width:720px; margin-inline:auto;}
+  .banner{
+    background:var(--gold); color:#231b06; border-radius:12px;
+    padding:14px 18px; font-size:.92rem; line-height:1.5; margin-bottom:36px;
+  }
+  h1{font-size:clamp(1.8rem,4vw,2.3rem); margin:0 0 6px; letter-spacing:-.01em;}
+  .meta{color:var(--ink-muted); font-size:.9rem; margin-bottom:40px;}
+  h2{font-size:1.15rem; margin:2.2em 0 .6em; color:var(--ink);}
+  p, li{font-size:.98rem; line-height:1.65; color:var(--ink-sub); max-width:65ch;}
+  ul{padding-left:1.3em;}
+  strong{color:var(--ink);}
+  table{width:100%; border-collapse:collapse; margin:1em 0 1.5em; font-size:.92rem;}
+  th, td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top;}
+  th{color:var(--ink); font-weight:600;}
+  td, th{color:var(--ink-sub);}
+  code{background:var(--card); border:1px solid var(--border); border-radius:4px; padding:1px 5px; font-size:.9em;}
+  a{color:var(--accent);}
+  @media (max-width:480px){ table, thead, tbody, th, td, tr{ display:block; } th{border-bottom:none;} td{border-bottom:1px solid var(--border);} }
+</style>
+
+<div class="wrap">
+  <div class="banner">
+    <strong>Draft, not final.</strong> This is a working draft written to accurately describe what the app actually does today. It has not been reviewed by a lawyer — have one review it (and confirm it matches your jurisdiction's requirements) before this app collects data from real users.
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <div class="meta">4's Company · Last updated: draft, date pending publication</div>
+
+  <p>4's Company ("we," "the app") is a double-dating app used by pairs of friends to meet other pairs. This policy explains what we collect, why, and what you can do about it.</p>
+
+  <h2>What we collect</h2>
+  <table>
+    <tr><th>Data</th><th>Why</th></tr>
+    <tr><td>Email &amp; password</td><td>To create and secure your account (handled by our backend provider, Supabase)</td></tr>
+    <tr><td>Name, birthday, height, job, school, bio</td><td>Shown on your profile; birthday is used only to confirm you're 18+</td></tr>
+    <tr><td>Your pair's shared photos, prompts, and answers</td><td>Shown on your pair's joint profile to other pairs</td></tr>
+    <tr><td>Messages you send to matches</td><td>To deliver your chats</td></tr>
+    <tr><td>A selfie, at verification time</td><td>Compared to your profile photo <strong>on your device</strong> to confirm you're a real person — see below</td></tr>
+    <tr><td>Reports &amp; blocks you file</td><td>To keep the app safe</td></tr>
+    <tr><td>A device push token, if you enable notifications</td><td>To notify you of matches and messages</td></tr>
+  </table>
+
+  <h2>About the selfie check</h2>
+  <p>When you verify your profile, the app opens your camera, takes a selfie, and compares it to your profile photo <strong>using on-device processing (Apple's Vision framework)</strong>. The selfie image itself is never uploaded or stored — only the pass/fail result (a single "verified" flag) is saved to your profile.</p>
+
+  <h2>Who we share it with</h2>
+  <ul>
+    <li><strong>Supabase</strong> — our backend provider, which stores your account, profile, photos, and messages on our behalf as a data processor.</li>
+    <li><strong>Apple</strong> — for App Store distribution and, if notifications are enabled, delivering push notifications.</li>
+    <li>We do not sell your data, and we do not use third-party advertising or analytics SDKs.</li>
+  </ul>
+
+  <h2>Who can see what</h2>
+  <p>Your pair's joint profile (photos, prompts, names) is visible to other pairs while you're active in Discover. Your solo profile details are only ever shown as part of that joint profile — there's no way to browse individuals separately from their pair. Messages are only visible to the two matched pairs in that conversation.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li><strong>Delete your account</strong> at any time from Account Settings. This permanently removes your account and associated data.</li>
+    <li><strong>Leave your pair</strong> without deleting your account, from Account Settings.</li>
+    <li><strong>Block or report</strong> another pair directly from their profile or a match.</li>
+    <li><strong>Turn off notifications</strong> at any time in iOS Settings.</li>
+  </ul>
+
+  <h2>Data retention</h2>
+  <p>We keep your data for as long as your account is active. Deleting your account removes your profile, photos, and messages from our systems, other than backups that age out on a routine schedule.</p>
+
+  <h2>Age requirement</h2>
+  <p>4's Company is for users 18 and older. We ask for your birthday during onboarding and don't allow accounts for anyone younger.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes in a way that matters, we'll let you know in the app before it takes effect.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or your data: <code>replace-with-your-contact-email</code></p>
+</div>
