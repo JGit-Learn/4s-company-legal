@@ -14,7 +14,7 @@
 <div class="banner"><strong>Draft for legal review.</strong> This policy is written to match what the app actually does today. Highlighted items must be filled in, and a lawyer should review the whole document before real users join.</div>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: October 4, 2026</p>
+<p class="meta">Last updated: October 9, 2026</p>
 
 <section class="summary">
 <h2>The short version</h2>
@@ -65,7 +65,7 @@
 <tr><td data-label="Category">Account data</td><td data-label="What it includes">Your email address and password. Passwords are stored only in hashed form by our authentication provider; nobody at 4's Company can see them.</td></tr>
 <tr><td data-label="Category">Personal profile</td><td data-label="What it includes">First name, birthday, gender, height, and optionally your job and school.</td></tr>
 <tr><td data-label="Category">Joint (pair) profile</td><td data-label="What it includes">Content you and your partner add together: "how we met," prompts and answers, availability, and your shared Discover filters (such as preferred age range).</td></tr>
-<tr><td data-label="Category">Meeting area</td><td data-label="What it includes">Where your pair would like to meet people: a pin you place on a map (anywhere in the world, not necessarily where you are), a radius, and the area's name (such as "Brooklyn, NY"). It's shared by both partners and either of you can change it.</td></tr>
+<tr><td data-label="Category">Launch city</td><td data-label="What it includes">4's Company is launching city by city. When you sign up you tell us whether you're based in NYC. If you're not, you vote for the city where we should launch next (Boston, Chicago, LA, SF, or DC) and can change that vote. This is your own answer: we don't read your device's location to check it.</td></tr>
 <tr><td data-label="Category">Photos</td><td data-label="What it includes">Photos you upload to your pair's profile (together photos and solo photos), and a fingerprint of each image (a SHA-256 hash) so we don't have to re-scan an identical photo.</td></tr>
 <tr><td data-label="Category">Verification selfie</td><td data-label="What it includes">If you choose to verify, the selfie you take in the app. It's kept only until a reviewer makes a decision, then deleted (see <a href="#moderation-verification">section 6</a>).</td></tr>
 <tr><td data-label="Category">Messages and activity</td><td data-label="What it includes">Messages you send to matched pairs, and your activity in the app: sparks and connection requests, confirmations, nudges to your partner, matches and unmatches.</td></tr>
@@ -86,14 +86,15 @@
 <h3>Information from others</h3>
 <p>Other members may give us information about you, for example when your partner builds your joint profile, when another pair reports your profile, a photo or a message, or when someone contacts support about you.</p>
 
-<div class="callout"><strong>What we don't collect:</strong> we never track your location. Your device's location is read only if you tap "Use Current Location" to place your meeting-area pin, and only that pin is saved. We don't access your contacts, or your camera roll beyond the photos you choose to upload. We don't use advertising identifiers, and we don't use third-party advertising or analytics SDKs.</div>
+<div class="callout"><strong>What we don't collect:</strong> we never track or read your device's location. The only location information we have is the launch city you tell us. We don't access your contacts, or your camera roll beyond the photos you choose to upload. We don't use advertising identifiers, and we don't use third-party advertising or analytics SDKs.</div>
 
 <h2 id="how-we-use">4. Why and how we use your data</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>Purpose</th><th>Data used</th><th>Legal basis (where required)</th></tr></thead>
 <tbody>
 <tr><td data-label="Purpose">Create and secure your account; sign you in</td><td data-label="Data used">Account data, technical data</td><td data-label="Legal basis (where required)">Performing our contract with you</td></tr>
-<tr><td data-label="Purpose">Build and show your pair's profile to other pairs; suggest pairs in Discover based on your shared filters and meeting area (pairs nearby first, then farther away)</td><td data-label="Data used">Personal and joint profile, photos, meeting area</td><td data-label="Legal basis (where required)">Performing our contract with you</td></tr>
+<tr><td data-label="Purpose">Build and show your pair's profile to other pairs; suggest pairs in Discover from your launch city, based on your shared filters</td><td data-label="Data used">Personal and joint profile, photos, launch city</td><td data-label="Legal basis (where required)">Performing our contract with you</td></tr>
+<tr><td data-label="Purpose">Decide which cities to launch next, let you into the app when your city launches, and tell you it has launched (if you allow notifications)</td><td data-label="Data used">Launch city answer and vote, push token</td><td data-label="Legal basis (where required)">Performing our contract with you; our legitimate interest in planning where to launch</td></tr>
 <tr><td data-label="Purpose">Enable sparks, matches, chat and nudges</td><td data-label="Data used">Messages and activity, profile</td><td data-label="Legal basis (where required)">Performing our contract with you</td></tr>
 <tr><td data-label="Purpose">Confirm members are 18 or older</td><td data-label="Data used">Birthday</td><td data-label="Legal basis (where required)">Legal obligation; legitimate interest in safety</td></tr>
 <tr><td data-label="Purpose">Check photos for nudity, violence and other unsafe content before they're shown</td><td data-label="Data used">Photos, photo fingerprints, moderation results</td><td data-label="Legal basis (where required)">Legitimate interest in a safe community</td></tr>
@@ -108,7 +109,7 @@
 <h2 id="how-we-share">5. How we share data</h2>
 <h3>With other members</h3>
 <ul>
-  <li><strong>Everyone in Discover</strong> can see your pair's joint profile: first names, ages (not your birthday), height, gender, job, school, photos, prompts, "how we met," your availability, the name of your meeting area (never the exact pin or the radius), and whether both of you are verified.</li>
+  <li><strong>Everyone in Discover</strong> can see your pair's joint profile: first names, ages (not your birthday), height, gender, job, school, photos, prompts, "how we met," your availability, and whether both of you are verified. Other members never see your launch-city answer or your vote; we only show how many votes each city has in total.</li>
   <li><strong>Your partner</strong> sees and edits your joint profile with you. If either of you leaves the pair, the shared profile is deleted for both of you.</li>
   <li><strong>Pairs you match with</strong> can message you. Messages in a match are visible to all four people in that match.</li>
 </ul>
@@ -119,7 +120,7 @@
 <tbody>
 <tr><td data-label="Provider">Supabase (hosted on Amazon Web Services, U.S.)</td><td data-label="What they do">Database, authentication, file storage and server functions</td><td data-label="Data involved">All account, profile, photo, message and safety data</td></tr>
 <tr><td data-label="Provider">Google Cloud Vision</td><td data-label="What they do">Automated safety scan of each uploaded photo</td><td data-label="Data involved">The image itself, sent directly for scanning. It isn't shared with Google through a public link.</td></tr>
-<tr><td data-label="Provider">Apple</td><td data-label="What they do">App distribution, push notifications, and Apple Maps (the map, place search, and looking up an area's name)</td><td data-label="Data involved">Push token and notification content; place searches and the meeting-area pin's position</td></tr>
+<tr><td data-label="Provider">Apple</td><td data-label="What they do">App distribution, push notifications, and Apple Maps (the map of the city you voted for)</td><td data-label="Data involved">Push token and notification content; the city shown on the map</td></tr>
 <tr><td data-label="Provider">Email delivery provider <span class="todo">[e.g. Resend, once set up]</span></td><td data-label="What they do">Sending account emails</td><td data-label="Data involved">Email address and email content</td></tr>
 <tr><td data-label="Provider">Cloudflare and GitHub</td><td data-label="What they do">Hosting our websites and our internal moderation tools</td><td data-label="Data involved">Technical data from website visits</td></tr>
 </tbody></table></div>
