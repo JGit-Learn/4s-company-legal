@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="robots" content="noindex">
 <title>Security check · 4's Company</title>
-<!-- Shown inside the 4's Company app (a small web view on the sign-in sheet): Cloudflare Turnstile
-     only runs on a web page. The solved token is handed back to the app, which sends it to Supabase. -->
+<!-- Runs inside the 4's Company app (a hidden web view on the sign-in sheet): Cloudflare Turnstile
+     only runs on a web page. The solved token is handed back to the app, which sends it to Supabase.
+     "interaction-only": nothing is shown unless Cloudflare asks for a click, and then the app
+     reveals the web view until it's done. -->
 <style>
   html, body { margin: 0; padding: 0; background: transparent; }
   body { display: flex; justify-content: center; align-items: center; min-height: 70px; }
@@ -24,10 +26,13 @@
       sitekey: siteKey,
       theme: "light",
       size: "flexible",
+      appearance: "interaction-only",
       "refresh-expired": "auto",
       callback: (token) => send({ token }),
       "expired-callback": () => send({ expired: true }),
       "error-callback": () => send({ error: true }),
+      "before-interactive-callback": () => send({ interactive: true }),
+      "after-interactive-callback": () => send({ interactive: false }),
     });
   }
   // Called by the app after each sign-in attempt: tokens can only be used once.
